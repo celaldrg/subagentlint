@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subagentlint"
+version = "0.1.0"
+description = "Lint Claude Code subagent files (.claude/agents) before they fail silently: frontmatter typos, missing descriptions, duplicate names, broken hook scripts, description token budget."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Celalettin Durğaç" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["claude-code", "subagents", "ai-agents", "linter", "cli", "frontmatter"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/celaldrg/subagentlint"
+
+[project.scripts]
+subagentlint = "subagentlint.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
