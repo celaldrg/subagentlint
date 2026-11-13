@@ -1,9 +1,14 @@
-# subagentlint
+<p align="center">
+  <img src="assets/banner.webp" alt="subagentlint" width="100%">
+</p>
 
-[![CI](https://github.com/celaldrg/subagentlint/actions/workflows/ci.yml/badge.svg)](https://github.com/celaldrg/subagentlint/actions/workflows/ci.yml)
-![python](https://img.shields.io/badge/python-3.10%2B-blue)
-![deps](https://img.shields.io/badge/dependencies-0-brightgreen)
-![license](https://img.shields.io/badge/license-MIT-green)
+<p align="center">
+  <a href="https://github.com/celaldrg/subagentlint/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/celaldrg/subagentlint/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-blue">
+  <img alt="deps" src="https://img.shields.io/badge/dependencies-0-brightgreen">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-green">
+  <a href="https://github.com/celaldrg/subagentlint/releases"><img alt="Release" src="https://img.shields.io/github/v/release/celaldrg/subagentlint?sort=semver"></a>
+</p>
 
 **Lint Claude Code subagents before they fail silently.**
 
@@ -14,6 +19,11 @@ Custom subagents live in `.claude/agents/*.md`. Claude Code skips a file with br
 - Checks hook scripts exist and are executable, skills resolve, and inline MCP servers have a `command` or `url`.
 - Reports duplicate names in the same agents tree (only one will load), names that override built-ins, and combined `description` fields that exceed the 15,000-token startup budget.
 - Text, JSON and GitHub Actions annotation output. Zero dependencies, Python 3.10+.
+
+<p align="center">
+  <img src="assets/terminal-demo.webp" alt="subagentlint, real terminal output" width="860">
+  <br><sub>Real output: <code>subagentlint examples/broken</code></sub>
+</p>
 
 ## Install
 
@@ -39,6 +49,11 @@ subagentlint --list-rules
 Exit codes: `0` clean, `1` errors (or warnings with `--strict`), `2` nothing found or a bad path.
 
 ## Example
+
+<p align="center">
+  <img src="assets/demo.gif" alt="subagentlint running in a terminal" width="860">
+  <br><sub>Recorded with <a href="https://github.com/charmbracelet/vhs">vhs</a>.</sub>
+</p>
 
 Running it on this repo's [`examples/broken`](examples/broken):
 
